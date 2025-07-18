@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+}
+
+.profile-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 2px solid white;
+}
+
+h1 {
+  font-size: 24px;
+  text-shadow: 0 0 10px white;
+}
+
+.subtitle {
+  font-size: 14px;
+  margin: 5px 0 15px;
+  color: #ccc;
+
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.icon {
+  font-size: 24px;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+.views {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.credits {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 12px;
+  color: #bbb;
+}
+
+.snow-container span {
+  position: absolute;
+  top: -10px;
+  background: white;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+.painel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 340px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.painel-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1a1a1a;
+  padding: 12px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #ddd;
+  transition: background 0.3s;
+  position: relative;
+  background: rgba(26, 26, 26, 0.3); /* fundo preto com 30% de opacidade */
+  /* mantém o restante das propriedades */
+
+
+}
+.painel-item.discord span,
+.painel-item.tiktok span,
+.painel-item.instagram span {
+  color: white !important;
+  text-shadow: none !important;
+
+}
+.painel-item.discord span,
+.painel-item.tiktok span,
+.painel-item.instagram span {
+  color: white !important; /* ou a cor que preferir */
+  text-shadow: none !important;
+  opacity: 1; /* garantir sem transparência */
+}
+
+
+
+.painel-item:hover {
+  background: #2a2a2a;
+}
+
+.icon-area {
+  width: 42px;
+  height: 42px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.icon-area.discord {
+  background-color: #5865F2;
+}
+
+.icon-area.tiktok {
+  background-color: #000;
+}
+
+.icon-area i {
+  font-size: 20px;
+  color: #fff;
+}
+
+.painel-item span {
+  flex-grow: 1;
+  font-size: 16px;
+}
+
+.right-icon {
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+
+/*avatar */
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #00f0ff; /* borda neon azul clara */
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.7), 0 0 40px rgba(0, 240, 255, 0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
+.profile-pic:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 1), 0 0 15px rgba(0, 255, 255, 0.7);
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(0, 240, 255, 0.7), 0 0 15px rgba(0, 240, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 5px rgba(0, 255, 255, 1), 0 0 15px rgba(0, 255, 255, 0.7);
+  }
+}
+
+/* Nome do usuário */
+.profile-card h1 {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #00f0ff;
+  text-shadow: 0 0 1px #00f0ff, 0 0 1px #00f0ff;
+  font-family: 'Orbitron', sans-serif; /* fonte futurista */
+  margin-bottom: 8px;
+}
+
+/* Subtítulo: Fase de treinamento */
+.profile-card .subtitle {
+  font-size: 16px;
+  color: white;
+  font-style: italic;
+  letter-spacing: 1.5px;
+  text-shadow: 0 0 5px #66f0ff;
+  margin-bottom: 20px;
+}
+
+/* Texto do painel (exemplo: Discord) */
+.painel-item span {
+  font-size: 18px;
+  font-weight: 700;
+  color: #00d8ff;
+  text-shadow: 0 0 3px #00d8ff;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.painel-item:hover span {
+  color: #00f0ff;
+  text-shadow: 0 0 7px #00f0ff, 0 0 5px #00f0ff;
+}
+
